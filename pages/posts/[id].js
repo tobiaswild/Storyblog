@@ -7,7 +7,7 @@ export default function Post({ postData }) {
     return (
         <>
             <Head>
-                <title>{postData.title}</title>
+                <title>Post | {postData.title}</title>
                 <meta author={postData.author} />
             </Head>
             <Layout>
