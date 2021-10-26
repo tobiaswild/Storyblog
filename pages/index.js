@@ -17,11 +17,13 @@ export default function Home({ allPostsData }) {
     return (
         <Layout home>
             <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-                <h2 className={utilStyles.headingLg}>Posts</h2>
+                <h2 className={utilStyles.headingLg}><strong>Posts</strong></h2>
                 <ul className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
                         <li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${encodeURIComponent(id.toLowerCase())}`}>{title}</Link>
+                            <Link href={`/posts/${encodeURIComponent(id.toLowerCase())}`}>
+                                <a className={utilStyles.heading}>{title}</a>
+                            </Link>
                             <br />
                             {date}
                         </li>
