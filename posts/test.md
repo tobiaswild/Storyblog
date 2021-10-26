@@ -1,9 +1,0 @@
----
-title: "test"
-author: "Tobias"
-date: "02.02.2005"
-keywords: "Test, HTML, CSS, JS, 123"
-description: "Nur ein Test"
----
-
-Test 123 Test 123

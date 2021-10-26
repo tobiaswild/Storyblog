@@ -52,9 +52,6 @@ function DropDownMenu() {
             <DropDownItem link="/authors/malou">
                 Malou
             </DropDownItem>
-            <DropDownItem link="/gallery">
-                Galerie
-            </DropDownItem>
         </div>
     )
 }
