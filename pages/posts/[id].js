@@ -7,8 +7,10 @@ export default function Post({ postData }) {
     return (
         <>
             <Head>
-                <title>Post | {postData.title}</title>
-                <meta author={postData.author} />
+                <title>{postData.title} von {postData.author}</title>
+                <meta name="author" content={postData.author} />
+                <meta name="keywords" content={postData.keywords} />
+                <meta name="description" content={postData.description} />
             </Head>
             <Layout>
                 Titel: {postData.title}

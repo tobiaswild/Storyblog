@@ -7,7 +7,7 @@ export default function Author({ authorData }) {
     return (
         <>
             <Head>
-                <title>Author | {authorData.name}</title>
+                <title>{authorData.name}</title>
             </Head>
             <Layout>
                 Name: {authorData.name}
