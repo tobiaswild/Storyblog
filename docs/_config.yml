@@ -1,3 +1,7 @@
 markdown: kramdown
 
 theme: jekyll-theme-minimal
+
+title: Storyblog
+description: Storyblog
+show_downloads: false
