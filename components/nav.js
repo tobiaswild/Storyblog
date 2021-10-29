@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import styles from './nav.module.css'
-import utilStyles from 'Styles/utils.module.css'
+import styles from 'Styles/nav.module.css'
 import { FaBars } from 'react-icons/fa'
 
-export default function Navbar({ children, home }) {
+export default function Navbar() {
     return (
         <nav className={styles.nav}>
             <NavItem icon={<FaBars />}>

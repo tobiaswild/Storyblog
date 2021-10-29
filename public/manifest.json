@@ -1,0 +1,8 @@
+{
+    "name": "Storyblog",
+    "short_name": "Storyblog",
+    "description": "Weather forecast information",
+    "start_url": "/",
+    "display": "standalone",
+    "scope": "/"
+}

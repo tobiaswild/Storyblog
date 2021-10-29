@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import styles from './footer.module.css'
+import styles from 'Styles/footer.module.css'
 // icons import
 import { FaGithub } from 'react-icons/fa'
 

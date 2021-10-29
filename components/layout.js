@@ -8,7 +8,7 @@ import Link from 'next/link'
 import Nav from './nav'
 import Footer from './footer'
 // styles import
-import styles from './layout.module.css'
+import styles from 'Styles/layout.module.css'
 import utilStyles from 'Styles/utils.module.css'
 
 export const siteTitle = 'Storyblog'
@@ -20,12 +20,13 @@ export default function Layout({ children, home }) {
             <Helmet htmlAttributes={{ lang: 'de-DE' }} />
             <Head>
                 <link rel="icon" href="/favicon.ico" />
+                <link rel="manifest" href="/manifest.json" />
                 <title>{siteTitle}</title>
             </Head>
             <Nav />
             <div className={styles.container}>
                 <header className={styles.header}>
-                    <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
+                    <h1 className={utilStyles.heading2Xl}>{name}</h1>
                 </header>
                 <main>{children}</main>
                 {!home && (

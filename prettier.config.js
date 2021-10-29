@@ -1,11 +1,7 @@
-const options = {
-    arrowParens: 'avoid',
-    singleQuote: true,
-    bracketSpacing: true,
-    endOfLine: 'lf',
+module.exports = {
+    trailingComma: 'es5',
+    tabWidth: 4,
     semi: false,
-    tabWidth: 2,
-    trailingComma: 'none'
+    singleQuote: true,
+    bracketSameLine: true,
 }
-
-module.exports = options
