@@ -6,6 +6,12 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[[redirects]]
+  from = "/über"
+  to = "/about"
+  status = 302
+  force = true
+
 [[headers]]
   for = "/*"
 

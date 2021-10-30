@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "test" : "echo \"Error: no test specified\" && exit 0",
+        "test": "echo \"Error: no test specified\" && exit 0",
         "build": "next build",
         "start": "next start",
         "export": "npm run build && next export"
@@ -24,7 +24,7 @@
         "remark": "^13.0.0",
         "remark-html": "^13.0.2",
         "sass": "^1.43.3",
-        "tailwindcss": "^2.2.17"
+        "tailwindcss": "^2.2.19"
     },
     "devDependencies": {
         "eslint": "^7.32.0",

@@ -20,7 +20,7 @@ export default function Home({ allPostsData }) {
                 <ul className={utilStyles.list}>
                     {allPostsData.map(({ id, date, title }) => (
                         <li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${encodeURIComponent(id.toLowerCase())}`}>
+                            <Link href={`/posts/${encodeURIComponent(id)}`}>
                                 <a className={utilStyles.heading}>{title}</a>
                             </Link>
                             <br />

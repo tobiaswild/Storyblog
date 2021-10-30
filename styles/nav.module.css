@@ -5,6 +5,7 @@
     height: 40px;
     width: 100%;
     background-color: var(--color6);
+    z-index: 100;
 }
 
 .navItem {

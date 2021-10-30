@@ -1,6 +1,6 @@
 ---
 name: "Malou"
-id: "malou"
+preview: "Hallo, ich bin Malou."
 ---
 
 Hallo mein Name ist **Malou**. Und ich schreibe gerne Texte.

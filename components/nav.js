@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import styles from 'Styles/nav.module.css'
-import { FaBars, FaHome, FaUser, FaBook, FaGithub } from 'react-icons/fa'
+import { FaBars, FaHome, FaUser, FaBook, FaInfoCircle } from 'react-icons/fa'
 
 export default function Navbar() {
     return (
@@ -65,11 +65,9 @@ function DropDownMenu() {
             <DropDownItem link="/posts" icon={<FaBook />}>
                 Posts
             </DropDownItem>
-            <DropDownItemNewPage
-                link="https://github.com/TobiasWild/storyblog"
-                icon={<FaGithub />}>
-                Source Code
-            </DropDownItemNewPage>
+            <DropDownItem link="/about" icon={<FaInfoCircle />}>
+                Über
+            </DropDownItem>
         </div>
     )
 }

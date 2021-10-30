@@ -15,7 +15,7 @@ export default function Post({ postData }) {
             <Layout>
                 Titel: {postData.title}
                 <br />
-                Autor: <Link href={`/authors/${encodeURIComponent(postData.author.toLowerCase())}`}>{postData.author}</Link>
+                Autor: <Link href={`/authors/${encodeURIComponent(postData.author)}`}>{postData.author}</Link>
                 <br />
                 Datum: {postData.date}
                 <br />
