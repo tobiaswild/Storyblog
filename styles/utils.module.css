@@ -25,6 +25,12 @@
     margin: 1rem 0;
 }
 
+.headingLgNoFont {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    margin: 1rem 0;
+}
+
 .headingMd {
     font-size: 1.2rem;
     line-height: 1.5;
@@ -61,4 +67,15 @@
 
 .lightText {
     color: #666;
-}   
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bigImage {
+    border-radius: 50%;
+}

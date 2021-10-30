@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import styles from 'Styles/nav.module.css'
-import { FaBars } from 'react-icons/fa'
+import { FaBars, FaHome, FaUser, FaBook, FaGithub } from 'react-icons/fa'
 
 export default function Navbar() {
     return (
@@ -14,8 +14,7 @@ export default function Navbar() {
 }
 
 function NavItem(props) {
-
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false)
 
     return (
         <>
@@ -23,8 +22,7 @@ function NavItem(props) {
                 <a
                     onClick={() => setOpen(!open)}
                     onHover={() => setOpen(!open)}
-                    className={styles.navItem}
-                >
+                    className={styles.navItem}>
                     {props.icon}
                 </a>
             </Link>
@@ -34,7 +32,6 @@ function NavItem(props) {
 }
 
 function DropDownMenu() {
-
     function DropDownItem(props) {
         return (
             <Link href={props.link} passHref={true}>
@@ -42,15 +39,37 @@ function DropDownMenu() {
                     <span className={styles.dropdownIcon}>{props.icon}</span>
                     {props.children}
                 </a>
-            </ Link>
+            </Link>
+        )
+    }
+
+    function DropDownItemNewPage(props) {
+        return (
+            <Link href={props.link} passHref={true}>
+                <a className={styles.dropdownItem} target="_blank">
+                    <span className={styles.dropdownIcon}>{props.icon}</span>
+                    {props.children}
+                </a>
+            </Link>
         )
     }
 
     return (
         <div className={styles.dropdown}>
-            <DropDownItem link="/authors/malou">
-                Malou
+            <DropDownItem link="/" icon={<FaHome />}>
+                Startseite
             </DropDownItem>
+            <DropDownItem link="/authors" icon={<FaUser />}>
+                Autoren
+            </DropDownItem>
+            <DropDownItem link="/posts" icon={<FaBook />}>
+                Posts
+            </DropDownItem>
+            <DropDownItemNewPage
+                link="https://github.com/TobiasWild/storyblog"
+                icon={<FaGithub />}>
+                Source Code
+            </DropDownItemNewPage>
         </div>
     )
 }

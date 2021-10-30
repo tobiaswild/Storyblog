@@ -1,13 +1,9 @@
-// react import
-import React from "react";
+import React from 'react'
 import Helmet from 'react-helmet'
-// next import
 import Head from 'next/head'
 import Link from 'next/link'
-// components import
 import Nav from './nav'
 import Footer from './footer'
-// styles import
 import styles from 'Styles/layout.module.css'
 import utilStyles from 'Styles/utils.module.css'
 
@@ -19,7 +15,6 @@ export default function Layout({ children, home }) {
         <>
             <Helmet htmlAttributes={{ lang: 'de-DE' }} />
             <Head>
-                <link rel="icon" href="/favicon.ico" />
                 <link rel="manifest" href="/manifest.json" />
                 <title>{siteTitle}</title>
             </Head>
