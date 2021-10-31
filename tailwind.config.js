@@ -1,10 +1,12 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
     mode: 'jit',
     purge: [
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
-    darkMode: 'media',
+    darkMode: false,
     theme: {
         fontFamily: {
             normal: [
@@ -22,19 +24,18 @@ module.exports = {
             ],
             crazy: ['Amatic SC'],
         },
-        backgroundColor: theme => ({
-            'color1': '354F52',
-            'color2': 'A63A50',
-            'color3': 'C3A29E',
-            'color4': 'A9C5A0',
-            'color5': '8CBCB9',
-            'color6': '896978',
-        }),
+        colors: {
+            white: colors.white,
+            color1: '#354f52',
+            color2: '#a63a50',
+            color3: '#c3a29e',
+            color4: '#a9c5a0',
+            color5: '#8cbcb9',
+            color6: '#896978',
+        },
     },
     variants: {
-        extend: {
-            backgroundColor: ['active'],
-        },
+        extend: {},
     },
     plugins: [],
 }

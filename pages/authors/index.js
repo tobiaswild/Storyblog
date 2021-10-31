@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Layout from 'Components/layout'
-import utilStyles from 'Styles/utils.module.css'
+
 import { getSortedAuthorsData } from 'Lib/authors'
 
 export async function getStaticProps() {
@@ -16,36 +16,30 @@ export default function Home({ allAuthorsData }) {
     return (
         <Layout posts>
             <section>
-                <h2
-                    className={utilStyles.headingLg}
-                    class="text-2xl font-crazy">
-                    Alle Autoren
-                </h2>
-                <div class="flex flex-row flex-wrap">
+                <h2 className="text-3xl font-crazy my-4">Alle Autoren</h2>
+                <div className="flex flex-row flex-wrap gap-3">
                     {allAuthorsData.map(({ id, name, preview }) => (
-                        <div class="w-full sm:w-1/1 md:w-1/2">
-                            <div
-                                class="rounded overflow-hidden shadow-lg mr-4 mb-4"
-                                key={id}>
+                        <div className="sm:w-1/1 md:w-[49%]">
+                            <div className="rounded overflow-hidden shadow-lg">
                                 <img
-                                    class="w-full max-h-60"
+                                    className="w-full max-h-60"
                                     src={`/images/${encodeURIComponent(
                                         id
                                     )}.png`}
                                     alt="Autor*innen Foto"
                                 />
-                                <div class="px-6 py-4">
-                                    <div class="font-bold text-xl mb-2">
+                                <div className="px-6 py-4">
+                                    <div className="font-bold text-xl mb-2">
                                         <Link
                                             href={`/authors/${encodeURIComponent(
                                                 id
                                             )}`}>
-                                            <a className={utilStyles.heading}>
+                                            <a className="text-color6">
                                                 {name}
                                             </a>
                                         </Link>
                                     </div>
-                                    <p class="text-gray-700 text-base">
+                                    <p className="text-gray-700 text-base">
                                         {preview}
                                     </p>
                                 </div>

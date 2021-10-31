@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import utilStyles from 'Styles/utils.module.css'
 import Layout from 'Components/layout'
 import { getAllAuthorIds, getAuthorData } from 'Lib/authors'
 
@@ -7,17 +6,17 @@ export default function Author({ authorData }) {
     return (
         <>
             <Layout author>
-                <div className={utilStyles.wrapper}>
+                <div className="flex flex-wrap flex-row justify-center">
                     <Image
                         src={`/images/${encodeURIComponent(authorData.id)}.png`}
                         alt="Picture of the author"
                         width={200}
                         height={200}
-                        className={utilStyles.bigImage}
+                        className="rounded-[50%]"
                     />
                 </div>
-                <div className={utilStyles.wrapper}>
-                    <p className={utilStyles.headingLgNoFont}>
+                <div className="flex flex-wrap flex-row justify-center">
+                    <p className="text-3xl my-4">
                         {authorData.name}
                     </p>
                 </div>

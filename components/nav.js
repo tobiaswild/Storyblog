@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import styles from 'Styles/nav.module.css'
 import { FaBars, FaHome, FaUser, FaBook, FaInfoCircle } from 'react-icons/fa'
 
 export default function Navbar() {
     return (
-        <nav className={styles.nav}>
+        <nav className="fixed top-0 left-0 h-10 w-full bg-color6 z-50">
             <NavItem icon={<FaBars />}>
                 <DropDownMenu />
             </NavItem>
@@ -22,7 +21,7 @@ function NavItem(props) {
                 <a
                     onClick={() => setOpen(!open)}
                     onHover={() => setOpen(!open)}
-                    className={styles.navItem}>
+                    className="flex justify-center items-center m-[2px] w-9 h-9 text-white text-xl">
                     {props.icon}
                 </a>
             </Link>
@@ -35,19 +34,8 @@ function DropDownMenu() {
     function DropDownItem(props) {
         return (
             <Link href={props.link} passHref={true}>
-                <a className={styles.dropdownItem}>
-                    <span className={styles.dropdownIcon}>{props.icon}</span>
-                    {props.children}
-                </a>
-            </Link>
-        )
-    }
-
-    function DropDownItemNewPage(props) {
-        return (
-            <Link href={props.link} passHref={true}>
-                <a className={styles.dropdownItem} target="_blank">
-                    <span className={styles.dropdownIcon}>{props.icon}</span>
+                <a className="text-white h-12 w-full flex items-center p-2">
+                    <span className="m-1">{props.icon}</span>
                     {props.children}
                 </a>
             </Link>
@@ -55,7 +43,7 @@ function DropDownMenu() {
     }
 
     return (
-        <div className={styles.dropdown}>
+        <div className="absolute top-10 left-0 w-auto min-w-[150px] overflow-hidden bg-color6">
             <DropDownItem link="/" icon={<FaHome />}>
                 Startseite
             </DropDownItem>
