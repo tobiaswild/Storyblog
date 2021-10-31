@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Layout from 'Components/layout'
 
 import { getSortedAuthorsData } from 'Lib/authors'
@@ -19,14 +20,17 @@ export default function Home({ allAuthorsData }) {
                 <h2 className="text-3xl font-crazy my-4">Alle Autoren</h2>
                 <div className="flex flex-row flex-wrap gap-3">
                     {allAuthorsData.map(({ id, name, preview }) => (
-                        <div className="sm:w-1/1 md:w-[49%]" key={id}>
-                            <div className="rounded overflow-hidden shadow-lg">
-                                <img
+                        <div className="max-w-lg sm:w-1/1 md:w-[49%] bg-color3 bg-opacity-50" key={id}>
+                            <div className="rounded overflow-hidden shadow-lg max-w-[95%] m-auto pt-[2.5%]">
+                                <Image
                                     className="w-full max-h-60"
                                     src={`/images/${encodeURIComponent(
                                         id
                                     )}.png`}
                                     alt="Autor*innen Foto"
+                                    width={1000}
+                                    height={750}
+                                    priority
                                 />
                                 <div className="px-6 py-4">
                                     <div className="font-bold text-xl mb-2">

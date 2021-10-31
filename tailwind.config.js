@@ -6,7 +6,7 @@ module.exports = {
         './pages/**/*.{js,ts,jsx,tsx}',
         './components/**/*.{js,ts,jsx,tsx}',
     ],
-    darkMode: false,
+    darkMode: 'media',
     theme: {
         fontFamily: {
             normal: [
@@ -32,6 +32,7 @@ module.exports = {
             color4: '#a9c5a0',
             color5: '#8cbcb9',
             color6: '#896978',
+            dark: '#121212'
         },
     },
     variants: {
