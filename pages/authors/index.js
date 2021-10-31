@@ -19,7 +19,7 @@ export default function Home({ allAuthorsData }) {
                 <h2 className="text-3xl font-crazy my-4">Alle Autoren</h2>
                 <div className="flex flex-row flex-wrap gap-3">
                     {allAuthorsData.map(({ id, name, preview }) => (
-                        <div className="sm:w-1/1 md:w-[49%]">
+                        <div className="sm:w-1/1 md:w-[49%]" key={id}>
                             <div className="rounded overflow-hidden shadow-lg">
                                 <img
                                     className="w-full max-h-60"
