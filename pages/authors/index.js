@@ -18,26 +18,26 @@ export default function Home({ allAuthorsData }) {
         <Layout posts>
             <section>
                 <h2 className="text-3xl font-crazy my-4">Alle Autoren</h2>
-                <div className="flex flex-row flex-wrap gap-3">
+                <div className="flex flex-row flex-wrap justify-center gap-3">
                     {allAuthorsData.map(({ id, name, preview }) => (
-                        <div className="max-w-lg sm:w-1/1 md:w-[49%] bg-color3 bg-opacity-50" key={id}>
-                            <div className="rounded overflow-hidden shadow-lg max-w-[95%] m-auto pt-[2.5%]">
+                        <div className="max-w-lg sm:w-1/1 md:w-[49%]" key={id}>
+                            <div className="rounded overflow-hidden shadow-lg sm:w-[95vw] w-auto m-auto pt-[2.5%] p-4 bg-color3 bg-opacity-50">
                                 <Image
-                                    className="w-full max-h-60"
+                                    className="max-h-60"
                                     src={`/images/${encodeURIComponent(
                                         id
                                     )}.png`}
                                     alt="Autor*innen Foto"
                                     width={1000}
                                     height={750}
-                                    priority
                                 />
                                 <div className="px-6 py-4">
                                     <div className="font-bold text-xl mb-2">
                                         <Link
                                             href={`/authors/${encodeURIComponent(
                                                 id
-                                            )}`}>
+                                            )}`}
+                                        >
                                             <a className="text-color6">
                                                 {name}
                                             </a>

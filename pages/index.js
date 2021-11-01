@@ -13,7 +13,6 @@ export default function Home() {
                             width={200}
                             height={200}
                             className="rounded-[50%]"
-                            style=""
                         />
                     </div>
                 </div>
