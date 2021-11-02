@@ -7,7 +7,9 @@ export default function Post({ postData }) {
     return (
         <>
             <Head>
-                <title>{postData.title} von {postData.author}</title>
+                <title>
+                    {postData.title} von {postData.author}
+                </title>
                 <meta name="author" content={postData.author} />
                 <meta name="keywords" content={postData.keywords} />
                 <meta name="description" content={postData.description} />
@@ -15,11 +17,16 @@ export default function Post({ postData }) {
             <Layout>
                 Titel: {postData.title}
                 <br />
-                Autor: <Link href={`/authors/${encodeURIComponent(postData.author)}`}>{postData.author}</Link>
+                Autor:{' '}
+                <Link href={`/authors/${encodeURIComponent(postData.author)}`}>
+                    {postData.author}
+                </Link>
                 <br />
                 Datum: {postData.date}
                 <br />
-                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <div
+                    dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+                />
             </Layout>
         </>
     )
@@ -29,16 +36,16 @@ export async function getStaticPaths() {
     const paths = getAllPostIds()
     return {
         paths,
-        fallback: false
+        fallback: false,
     }
 }
 
 export async function getStaticProps({ params }) {
     // Add the "await" keyword like this:
-    const postData = await getPostData(params.id);
+    const postData = await getPostData(params.id)
     return {
         props: {
-            postData
-        }
+            postData,
+        },
     }
 }

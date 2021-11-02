@@ -20,8 +20,8 @@ export default function Home({ allAuthorsData }) {
                 <h2 className="text-3xl font-crazy my-4">Alle Autoren</h2>
                 <div className="flex flex-row flex-wrap justify-center gap-3">
                     {allAuthorsData.map(({ id, name, preview }) => (
-                        <div className="max-w-lg sm:w-1/1 md:w-[49%]" key={id}>
-                            <div className="rounded overflow-hidden shadow-lg sm:w-[95vw] w-auto m-auto pt-[2.5%] p-4 bg-color3 bg-opacity-50">
+                        <div className="max-w-lg sm:w-[92vw] w-[49%]" key={id}>
+                            <div className="rounded overflow-hidden shadow-lg m-auto p-4 bg-color3 bg-opacity-50">
                                 <Image
                                     className="max-h-60"
                                     src={`/images/${encodeURIComponent(
@@ -36,8 +36,7 @@ export default function Home({ allAuthorsData }) {
                                         <Link
                                             href={`/authors/${encodeURIComponent(
                                                 id
-                                            )}`}
-                                        >
+                                            )}`}>
                                             <a className="text-color6">
                                                 {name}
                                             </a>

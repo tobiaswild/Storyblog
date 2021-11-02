@@ -16,9 +16,7 @@ export default function Author({ authorData }) {
                     />
                 </div>
                 <div className="flex flex-wrap flex-row justify-center">
-                    <p className="text-3xl my-4">
-                        {authorData.name}
-                    </p>
+                    <p className="text-3xl my-4">{authorData.name}</p>
                 </div>
                 <div
                     dangerouslySetInnerHTML={{ __html: authorData.contentHtml }}

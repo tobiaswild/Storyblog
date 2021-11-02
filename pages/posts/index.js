@@ -22,7 +22,9 @@ export default function Posts({ allPostsData }) {
                             className="mt-0 mx-0 mb-5 p-1 bg-color3 bg-opacity-50 rounded-xl"
                             key={id}>
                             <Link href={`/posts/${encodeURIComponent(id)}`}>
-                                <a className="text-color6 dark:text-color4">{title}</a>
+                                <a className="text-color6 dark:text-color4">
+                                    {title}
+                                </a>
                             </Link>
                             <br />
                             {date}

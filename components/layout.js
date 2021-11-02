@@ -3,12 +3,12 @@ import Helmet from 'react-helmet'
 import Head from 'next/head'
 import Link from 'next/link'
 import Nav from './nav'
+import Header from './header'
 import Footer from './footer'
 
 export const siteTitle = 'Storyblog'
-const name = siteTitle
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, headerName }) {
     return (
         <>
             <Helmet htmlAttributes={{ lang: 'de-DE' }} />
@@ -18,10 +18,8 @@ export default function Layout({ children, home }) {
             </Head>
             <div className="min-h-screen h-full w-full dark:bg-dark dark:text-white">
                 <Nav />
-                <div className="max-w-3xl px-0 py-4 mt-8 mx-auto">
-                    <header className="flex flex-col items-center">
-                        <h1 className="text-6xl font-crazy my-4">{name}</h1>
-                    </header>
+                <div className="max-w-3xl sm:w-[95vw] md:w-[95vw] px-0 py-4 mt-8 mx-auto">
+                    <Header name={headerName} />
                     <main>{children}</main>
                     {!home && (
                         <div className="mt-12">
