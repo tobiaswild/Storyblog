@@ -15,10 +15,11 @@
 
 * {
     box-sizing: border-box;
+    user-select: text;
 }
 
 a {
-    color: #0070f3;
+    @apply text-black dark:text-white !important;
     text-decoration: none;
 }
 

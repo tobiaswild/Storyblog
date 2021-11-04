@@ -4,7 +4,7 @@ import { FaBars, FaHome, FaUser, FaBook, FaInfoCircle } from 'react-icons/fa'
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 h-10 w-full bg-color6 z-50">
+        <nav className="fixed top-0 left-0 h-10 w-screen bg-color6 z-50">
             <NavItem icon={<FaBars />}>
                 <DropDownMenu />
             </NavItem>
@@ -47,13 +47,13 @@ function DropDownMenu() {
             <DropDownItem link="/" icon={<FaHome />}>
                 Startseite
             </DropDownItem>
-            <DropDownItem link="/authors" icon={<FaUser />}>
+            <DropDownItem link="/autoren" icon={<FaUser />}>
                 Autoren
             </DropDownItem>
             <DropDownItem link="/posts" icon={<FaBook />}>
                 Posts
             </DropDownItem>
-            <DropDownItem link="/about" icon={<FaInfoCircle />}>
+            <DropDownItem link="/ueber" icon={<FaInfoCircle />}>
                 Über
             </DropDownItem>
         </div>

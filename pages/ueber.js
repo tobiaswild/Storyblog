@@ -2,9 +2,9 @@ import Link from 'next/link'
 import Layout from 'Components/layout'
 import { FaGithub } from 'react-icons/fa'
 
-export default function About() {
+export default function Ueber() {
     return (
-        <Layout about>
+        <Layout about headerName="ueber">
             <section className="text-xl">
                 <h2 className="text-3xl font-crazy my-4">Über Storyblog</h2>
                 <p>
