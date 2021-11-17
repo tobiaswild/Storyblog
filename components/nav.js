@@ -4,7 +4,7 @@ import { FaBars, FaHome, FaUser, FaBook, FaInfoCircle } from 'react-icons/fa'
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 h-10 w-screen bg-color6 z-50">
+        <nav className="fixed top-0 left-0 h-10 w-screen bg-color6 z-50 text-white">
             <NavItem icon={<FaBars />}>
                 <DropDownMenu />
             </NavItem>

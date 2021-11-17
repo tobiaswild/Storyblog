@@ -9,9 +9,9 @@ export default function Home() {
             </Head>
             <Layout home headerName="home">
                 <section className="text-xl">
-                    <h2 className="text-3xl font-crazy">
+                    <h3>
                         Herzlich Willkommen bei Storyblog.
-                    </h2>
+                    </h3>
                 </section>
             </Layout>
         </>

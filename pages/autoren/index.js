@@ -21,7 +21,7 @@ export default function Home({ allAuthorsData }) {
             </Head>
             <Layout authors headerName="autoren">
                 <section>
-                    <h2 className="text-3xl font-crazy my-4">Alle Autoren</h2>
+                    <h3>Alle Autoren</h3>
                     <div className="flex flex-row flex-wrap justify-center gap-3">
                         {allAuthorsData.map(({ id, name, preview }) => (
                             <div

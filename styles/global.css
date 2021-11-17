@@ -4,25 +4,55 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --color1: rgb(53, 79, 82);
-    --color2: rgb(166, 58, 80);
-    --color3: rgb(195, 162, 158);
-    --color4: rgb(169, 197, 160);
-    --color5: rgb(140, 188, 185);
-    --color6: rgb(137, 105, 120);
-}
+@layer base {
+    :root {
+        --color1: rgb(53, 79, 82);
+        --color2: rgb(166, 58, 80);
+        --color3: rgb(195, 162, 158);
+        --color4: rgb(169, 197, 160);
+        --color5: rgb(140, 188, 185);
+        --color6: rgb(137, 105, 120);
+    }
+    html,
+    body {
+        @apply select-text font-normal;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-crazy my-2;
+    }
+    h1 {
+        @apply text-6xl;
+    }
+    h2 {
+        @apply text-5xl;
+    }
+    h3 {
+        @apply text-4xl;
+    }
+    h4 {
+        @apply text-3xl;
+    }
+    h5 {
+        @apply text-2xl;
+    }
+    h6 {
+        @apply text-xl;
+    }
 
-* {
-    box-sizing: border-box;
-    user-select: text;
-}
+    * {
+        @apply box-border;
+    }
 
-a {
-    @apply text-black dark:text-white !important;
-    text-decoration: none;
-}
+    a {
+        @apply text-black dark:text-white no-underline;
+    }
 
-a:hover {
-    text-decoration: underline;
+    a:hover {
+        @apply underline;
+    }
 }

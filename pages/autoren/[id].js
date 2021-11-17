@@ -10,7 +10,7 @@ export default function Author({ authorData }) {
                     {siteTitle} - Autor*in: {authorData.name}
                 </title>
             </Head>
-            <Layout author headerName={authorData.id}>
+            <Layout author>
                 <div className="flex flex-wrap flex-row justify-center">
                     <p className="text-3xl my-4">{authorData.name}</p>
                 </div>

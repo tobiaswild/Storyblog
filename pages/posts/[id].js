@@ -12,7 +12,7 @@ export default function Post({ postData }) {
                     {postData.author}
                 </title>
             </Head>
-            <Layout post headerName="posts">
+            <Layout post>
                 <p className="text-3xl font-bold m-0">{postData.title}</p>
                 <p className="text-xl font-light">{postData.preview}</p>
                 <p>

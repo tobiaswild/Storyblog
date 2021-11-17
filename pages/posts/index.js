@@ -20,7 +20,7 @@ export default function Posts({ allPostsData }) {
             </Head>
             <Layout posts headerName="posts">
                 <section className="text-xl">
-                    <h2 className="text-3xl font-crazy my-4">Alle Posts</h2>
+                    <h3>Alle Posts</h3>
                     <ul className="list-none p-0 m-0">
                         {allPostsData.map(({ id, date, title }) => (
                             <li

@@ -4,9 +4,9 @@ import { FaGithub } from 'react-icons/fa'
 
 export default function Ueber() {
     return (
-        <Layout about headerName="ueber">
+        <Layout about headerName="über">
             <section className="text-xl">
-                <h2 className="text-3xl font-crazy my-4">Über Storyblog</h2>
+                <h3>Über Storyblog</h3>
                 <p>
                     Storyblog ist ein Blog für Malou. Programmiert von Tobias.
                     Viel Spaß beim lesen der Geschichten...
